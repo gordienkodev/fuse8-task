@@ -18,8 +18,13 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
       {name} - {who}
     </h3>
     <div className={styles.details}>
-      <div>Status: {status}</div>
-      <div>Created: {created}</div>
+      <div className={styles.status}>
+        Status:{' '}
+        <span className={status === 'Alive' ? styles.alive : styles.dead}>
+          {status}
+        </span>
+      </div>
+      <div className={styles.created}>Created: {created}</div>
     </div>
   </div>
 );
