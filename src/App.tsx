@@ -1,6 +1,7 @@
 import styles from './App.module.scss';
 import { useState } from 'react';
 import SearchForm from './components/SearchForm/SearchForm';
+import SearchResults from './components/SearchResults/SearchResults';
 
 const App = () => {
   const [result, setResult] = useState('');
@@ -8,7 +9,7 @@ const App = () => {
   return (
     <div className={styles.container}>
       <SearchForm onSearch={setResult} />
-      {/* <SearchResults result={result} /> */}
+      <SearchResults />
     </div>
   );
 };
