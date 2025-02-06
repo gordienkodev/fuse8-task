@@ -1,0 +1,27 @@
+.searchForm {
+  padding-top: 120px;
+  width: 100%;
+  max-width: 626px;
+}
+
+input {
+  width: 100%;
+  max-width: 100%;
+  color: rgb(101, 110, 194);
+  font-family: Fira Sans;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 19px 25px;
+  outline: none;
+  border: none;
+  background: transparent;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+input::placeholder {
+  color: rgb(101, 110, 194);
+}
+
+input:focus {
+  box-shadow: 0 6px 6px -2px rgba(128, 128, 128, 0.4);
+}
