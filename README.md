@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# SPA for fuse8
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This application allows users to search for characters by name using a provided API. Upon opening the page, the user sees only the search bar, which automatically gains focus for convenience. When the user types more than three characters, a request is sent to the API to retrieve matching results. Each character card links to a dedicated page displaying detailed information.
 
-Currently, two official plugins are available:
+### Technical Requirements
+- Responsive design (320px to 1920px, pixel-perfect not required)
+- Browser support: Latest Chrome version
+- Built with React
+###  Features
+- Search bar automatically focuses on page load
+- API request triggers after typing at least three characters
+- Each character card links to a details page
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Deploy: 
 
-## Expanding the ESLint configuration
+## Author
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- [Pavel Gordienko](https://github.com/guz86)
 
-- Configure the top-level `parserOptions` property like this:
+## Setup and Running
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Use `node 22.x` or higher.
+- Clone this repo: `$ git clone https://github.com/guz86/fuse8-task.git`. 
+- Install dependencies: `$ npm install`.
+- Start server: `$ npm run dev`.
+- Now you can see web application to the address: `http://localhost:5173/`.
+
+### Build
+
+Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+
+```bash
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Stack
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- React
+- Typescript
+- Vite
+ 
+## Folder structure
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- components – Contains reusable components that make up the UI of your application (e.g., buttons, forms, cards, etc.).
+- hooks – Custom React hooks that encapsulate reusable logic for managing state, fetching data, etc.
+
+## Screenshots
+

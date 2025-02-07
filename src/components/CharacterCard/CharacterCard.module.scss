@@ -1,0 +1,40 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-shadow: 0px 7px 25px 0px rgba(100, 100, 111, 0.2);
+  padding: 20px 34px 16px 34px;
+
+  h3 {
+    color: rgb(40, 38, 38);
+    font-family: Fira Sans;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+
+    .created,
+    .status {
+      color: rgb(118, 118, 118);
+      font-family: Montserrat;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+
+      .alive {
+        color: #267504;
+        font-weight: bold;
+      }
+
+      .dead {
+        color: #820a0a;
+        font-weight: bold;
+      }
+    }
+  }
+}

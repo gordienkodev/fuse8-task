@@ -1,0 +1,31 @@
+#root {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 429px;
+  width: 100%;
+  padding-bottom: 67px;
+
+  .count {
+    align-self: flex-start;
+    padding-left: 39px;
+    color: rgb(40, 38, 38);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
