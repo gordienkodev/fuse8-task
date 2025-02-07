@@ -35,6 +35,7 @@
 @media (max-width: 768px) {
   .resultsGrid {
     grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
   }
 
   .card {
@@ -45,6 +46,7 @@
 @media (max-width: 480px) {
   .resultsGrid {
     grid-template-columns: 1fr;
+    padding: 0 10px;
   }
 
   .card {

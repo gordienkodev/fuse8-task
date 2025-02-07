@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react';
-
-export interface Character {
-  id: number;
-  name: string;
-  status: string;
-  species: string;
-  created: string;
-}
+import { Character } from './types';
 
 export const useCharactersSearch = (query: string) => {
   const [characters, setCharacters] = useState<Character[]>([]);

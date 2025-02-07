@@ -1,11 +1,5 @@
 import styles from './CharacterCard.module.scss';
-
-export interface CharacterCardProps {
-  name: string;
-  status: string;
-  who: string;
-  created: string;
-}
+import { CharacterCardProps } from './types';
 
 const CharacterCard: React.FC<CharacterCardProps> = ({
   name,

@@ -1,19 +1,7 @@
 import { Link } from 'react-router-dom';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import styles from './SearchResults.module.scss';
-
-type SearchResultsProps = {
-  query: string;
-  characters: {
-    id: number;
-    name: string;
-    status: string;
-    species: string;
-    created: string;
-  }[];
-  loading: boolean;
-  error: string;
-};
+import { SearchResultsProps } from './types';
 
 const SearchResults = ({
   query,
