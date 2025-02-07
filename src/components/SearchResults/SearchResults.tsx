@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import styles from './SearchResults.module.scss';
 
@@ -29,7 +30,16 @@ const SearchResults = ({
         <p>nothing found</p>
       ) : (
         characters.map((card, index) => (
-          <div
+          <Link
+            to={`/character/${card.name}`}
+            state={{
+              name: card.name,
+              status: card.status,
+              who: card.species,
+              created: new Date(card.created)
+                .toLocaleDateString('ru-RU')
+                .replace(/\//g, '.'),
+            }}
             key={card.id}
             className={`${styles.card} ${index < 2 ? styles.large : ''}`}
           >
@@ -41,7 +51,7 @@ const SearchResults = ({
                 .toLocaleDateString('ru-RU')
                 .replace(/\//g, '.')}
             />
-          </div>
+          </Link>
         ))
       )}
     </div>

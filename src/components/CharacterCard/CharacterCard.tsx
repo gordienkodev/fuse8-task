@@ -1,6 +1,6 @@
 import styles from './CharacterCard.module.scss';
 
-interface CharacterCardProps {
+export interface CharacterCardProps {
   name: string;
   status: string;
   who: string;
