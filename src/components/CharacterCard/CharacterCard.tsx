@@ -1,12 +1,7 @@
 import styles from './CharacterCard.module.scss';
 import { CharacterCardProps } from './types';
 
-const CharacterCard: React.FC<CharacterCardProps> = ({
-  name,
-  status,
-  who,
-  created,
-}) => (
+const CharacterCard = ({ name, status, who, created }: CharacterCardProps) => (
   <div className={styles.card}>
     <h3>
       {name} - {who}
