@@ -1,14 +1,18 @@
-import { useState } from 'react';
-import mockData from './data.json';
+import { useCharactersSearch } from '../../hooks/useCharactersSearch';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import styles from './SearchResults.module.scss';
 
-const SearchResults: React.FC = () => {
-  const [cards] = useState(mockData.results);
+type SearchResultsProps = { query: string };
+
+const SearchResults = ({ query }: SearchResultsProps) => {
+  const { characters, loading, error } = useCharactersSearch(query);
+
+  if (loading) return <p>Загрузка...</p>;
+  if (error) return <p>Ошибка: {error}</p>;
 
   return (
     <div className={styles.resultsGrid}>
-      {cards.map((card, index) => (
+      {characters.map((card, index) => (
         <div
           key={card.id}
           className={`${styles.card} ${index < 2 ? styles.large : ''}`}
@@ -16,8 +20,10 @@ const SearchResults: React.FC = () => {
           <CharacterCard
             name={card.name}
             status={card.status}
-            who={card.who}
-            created={card.created}
+            who={card.species}
+            created={new Date(card.created)
+              .toLocaleDateString('ru-RU')
+              .replace(/\//g, '.')}
           />
         </div>
       ))}

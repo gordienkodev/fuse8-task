@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './SearchForm.module.scss';
 
 interface SearchFormProps {
@@ -8,25 +8,25 @@ interface SearchFormProps {
 const SearchForm = ({ onSearch }: SearchFormProps) => {
   const [query, setQuery] = useState('');
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    onSearch(query);
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      onSearch(query);
+  useEffect(() => {
+    if (query.length < 3) {
+      onSearch('');
+      return;
     }
-  };
+
+    const timeout = setTimeout(() => {
+      onSearch(query);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, [query, onSearch]);
 
   return (
-    <form className={styles.searchForm} onSubmit={handleSearch}>
+    <form className={styles.searchForm}>
       <input
         type='text'
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        onKeyDown={handleKeyDown}
         placeholder='Search characters...'
         autoFocus
       />

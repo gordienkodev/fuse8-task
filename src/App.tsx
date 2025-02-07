@@ -4,12 +4,11 @@ import SearchForm from './components/SearchForm/SearchForm';
 import SearchResults from './components/SearchResults/SearchResults';
 
 const App = () => {
-  const [result, setResult] = useState('');
-  console.log(result);
+  const [query, setQuery] = useState('');
   return (
     <div className={styles.container}>
-      <SearchForm onSearch={setResult} />
-      <SearchResults />
+      <SearchForm onSearch={setQuery} />
+      <SearchResults query={query} />
     </div>
   );
 };
