@@ -45,4 +45,7 @@ npm run build
 - hooks – Custom React hooks that encapsulate reusable logic for managing state, fetching data, etc.
 
 ## Screenshots
+![image](https://github.com/user-attachments/assets/d7fbb64a-a90f-4dd1-b156-19410d3eb1b9)
+![image](https://github.com/user-attachments/assets/3c0e5531-8670-46d3-bd63-7948482d0b7e)
+
 
