@@ -11,7 +11,7 @@ const App = () => {
   const { count, characters, loading, error } = useCharactersSearch(query);
 
   return (
-    <Router>
+    <Router basename='/fuse8-task'>
       <div className={styles.container}>
         <Routes>
           <Route
