@@ -11,7 +11,7 @@ This application allows users to search for characters by name using a provided 
 - API request triggers after typing at least three characters
 - Each character card links to a details page
 
-Deploy: 
+Deploy:  [https://guz86.github.io/fuse8-task/](https://guz86.github.io/fuse8-task/)
 
 ## Author
 
