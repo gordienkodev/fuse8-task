@@ -20,7 +20,7 @@ Deploy:  [https://gordienkodev.github.io/fuse8-task/](https://gordienkodev.githu
 ## Setup and Running
 
 - Use `node 22.x` or higher.
-- Clone this repo: `$ git clone https://github.com/guz86/fuse8-task.git`. 
+- Clone this repo: `$ git clone https://github.com/gordienkodev/fuse8-task.git`. 
 - Install dependencies: `$ npm install`.
 - Start server: `$ npm run dev`.
 - Now you can see web application to the address: `http://localhost:5173/`.
