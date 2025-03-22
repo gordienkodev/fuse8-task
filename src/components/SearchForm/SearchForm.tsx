@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import styles from './SearchForm.module.scss';
-import { SearchFormProps } from './types';
+import { ISearchFormProps } from './types';
 
-const SearchForm = ({ onSearch }: SearchFormProps) => {
+const SearchForm = ({ onSearch }: ISearchFormProps) => {
   const [query, setQuery] = useState('');
 
   useEffect(() => {

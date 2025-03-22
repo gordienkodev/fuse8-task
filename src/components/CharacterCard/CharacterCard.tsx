@@ -1,7 +1,7 @@
 import styles from './CharacterCard.module.scss';
-import { CharacterCardProps } from './types';
+import { ICharacterCardProps } from './types';
 
-const CharacterCard = ({ name, status, who, created }: CharacterCardProps) => (
+const CharacterCard = ({ name, status, who, created }: ICharacterCardProps) => (
   <div className={styles.card}>
     <h3>
       {name} - {who}

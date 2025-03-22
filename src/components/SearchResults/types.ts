@@ -1,4 +1,4 @@
-export type SearchResultsProps = {
+export type TSearchResultsProps = {
   query: string;
   characters: {
     id: number;

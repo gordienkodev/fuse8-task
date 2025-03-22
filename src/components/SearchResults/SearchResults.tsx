@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import styles from './SearchResults.module.scss';
-import { SearchResultsProps } from './types';
+import { TSearchResultsProps } from './types';
 
 const SearchResults = ({
   query,
   characters,
   loading,
   error,
-}: SearchResultsProps) => {
+}: TSearchResultsProps) => {
   if (loading) return <p>loading...</p>;
   if (error) return <p>error: {error}</p>;
 

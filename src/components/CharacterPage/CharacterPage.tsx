@@ -1,11 +1,11 @@
 import { useLocation } from 'react-router-dom';
 import CharacterCard from '../CharacterCard/CharacterCard';
 import styles from './CharacterPage.module.scss';
-import { Character } from './types';
+import { TCharacter } from './types';
 
 const CharacterPage = () => {
   const location = useLocation();
-  const character = location.state as Character;
+  const character = location.state as TCharacter;
 
   if (!character) {
     return <p>Character not found!</p>;

@@ -1,4 +1,4 @@
-export interface CharacterCardProps {
+export interface ICharacterCardProps {
   name: string;
   status: string;
   who: string;
